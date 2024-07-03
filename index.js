@@ -17,9 +17,9 @@ app.use('/api/product',productRoutes)
 app.use('/api/user',userRoutes)
 app.use('/api/order',orderRoutes)
 
-app.use(express.static(path.join(__dirname, "./client/build")));
+app.use(express.static(path.join(__dirname, "./build")));
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./build/index.html"));
 });
 
 const port=process.env.PORT
